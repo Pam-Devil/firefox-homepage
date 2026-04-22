@@ -9,7 +9,9 @@
     z-index: 1001;
     height: 100%;
     width: 10em;
-    background-color: var(--menu-color);
+    background: rgba(25, 20, 30, 0.137);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     display: flex;
     padding: 1em;
     transition: transform 0.3s ease;
@@ -36,7 +38,10 @@
 .links-container {
     left: 0;
     transform: translateX(-100%);
-    border-right: var(--menu-border);
+    background: rgba(25, 20, 30, 0.137);
+    border-right: 0.1em solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 
