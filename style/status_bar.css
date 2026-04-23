@@ -27,3 +27,18 @@
     position: absolute;
     right: 2rem;
 }
+
+@font-face {
+    font-family: "NerdFont";
+    src: url("../fonts/FiraCodeNerdFontMono-Regular.ttf");
+}
+
+.status-bar .icon {
+    text-align: center;
+    font-family: "NerdFont";
+    color: rgb(76, 201, 103);
+    font-size: 2rem;
+}
+.icon + .icon {
+    color: rgb(240, 88, 113);
+}
