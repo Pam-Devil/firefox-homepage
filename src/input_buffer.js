@@ -1,4 +1,4 @@
 const inputs = {
-    "a":function (){};
-    "gd":function(){};
-}
+    "a":function (){},
+    "gd":function(){},
+};
