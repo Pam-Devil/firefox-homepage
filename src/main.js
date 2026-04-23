@@ -1,6 +1,14 @@
 let ativo = 1;
 let active_notes=false
 
+//TODO: Create a TODO list
+//TODO: Implement the input buffer system
+//TODO: Implement local storage support
+//TODO: Finish the status bar
+//TODO: Finish the input thing
+//TODO: Implement the calendar
+
+
 function foo(){
     console.log("Minha primeira PR");
 }
