@@ -5,6 +5,10 @@ function foo(){
     console.log("Minha primeira PR");
 }
 
+function bar(){
+    console.log("Meu segundo pull request para dev");
+}
+
 function toggle_notes(){
     notes = document.getElementById("i_notes-container");
     active_notes = !active_notes;
@@ -48,6 +52,7 @@ function main() {
         "n":toggle_notes
     }
     foo();
+    bar();
     const url1 = "https://c.l3n.co/cQa7XM.jpg";
     const url2 = "https://b.l3n.co/cQaYkc.jpg";
     const url3 = "https://a.l3n.co/cQan9x.png";
