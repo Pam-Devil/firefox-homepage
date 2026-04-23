@@ -1,6 +1,10 @@
 let ativo = 1;
 let active_notes=false
 
+function foo(){
+    console.log("Minha primeira PR");
+}
+
 function toggle_notes(){
     notes = document.getElementById("i_notes-container");
     active_notes = !active_notes;
@@ -43,7 +47,7 @@ function main() {
     const events = {
         "n":toggle_notes
     }
-
+    foo();
     const url1 = "https://c.l3n.co/cQa7XM.jpg";
     const url2 = "https://b.l3n.co/cQaYkc.jpg";
     const url3 = "https://a.l3n.co/cQan9x.png";
