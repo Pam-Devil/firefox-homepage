@@ -1,3 +1,4 @@
+import {command, add_command, input, input_buffer, handle_input} from "./input_buffer.js"
 let ativo = 1;
 let active_notes=false
 
@@ -8,19 +9,10 @@ let active_notes=false
 //TODO: Finish the input thing
 //TODO: Implement the calendar
 
-
-function foo(){
-    console.log("Minha primeira PR");
-}
-
-function bar(){
-    console.log("Meu segundo pull request para dev");
-}
-
 function toggle_notes(){
-    notes = document.getElementById("i_notes-container");
+    let notes = document.getElementById("i_notes-container");
     active_notes = !active_notes;
-    translate = active_notes === true ? "0%":"-100%"
+    let translate = active_notes === true ? "0%":"-100%"
     notes.style.transform = `translateX(${translate})`
 }
 
@@ -39,7 +31,6 @@ function change_paper(url){
 
     antigo.style.opacity = 0;
     ativo = ativo === 1 ? 2:1;
-    console.log("changed paper!")
 }
 
 function add_shortcut(name,url){
@@ -59,8 +50,7 @@ function main() {
     const events = {
         "n":toggle_notes
     }
-    foo();
-    bar();
+
     const url1 = "https://c.l3n.co/cQa7XM.jpg";
     const url2 = "https://b.l3n.co/cQaYkc.jpg";
     const url3 = "https://a.l3n.co/cQan9x.png";
@@ -97,11 +87,14 @@ function main() {
     const LIST_has_floor = [false,false,true,false,true,true,false,false,true,true,true,true,true,true,true];
     let current = Math.floor(Math.random() * urls.length);
     document.addEventListener("keydown",(event)=>{
-        if (event.altKey === true && events[event.key]){
-            events[event.key]();
-        }
+        //alt key
+        //ctrl key
+        //normal key
+        
+        input_buffer(event.key); 
     })
     document.addEventListener("DOMContentLoaded", () => {
+        add_command("Altn", toggle_notes)
         if (LIST_has_floor[current] === true) {
             document.getElementById("i_floor_rain").style.visibility = "visible";
         } else {
