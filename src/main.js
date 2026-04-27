@@ -1,4 +1,5 @@
 import {command, add_command, input, input_buffer, handle_input} from "./input_buffer.js"
+import * as window_manager from  "./tiling_windows.js"
 let ativo = 1;
 let active_notes=false
 
@@ -95,6 +96,7 @@ function main() {
     })
     document.addEventListener("DOMContentLoaded", () => {
         add_command("Altn", toggle_notes)
+        add_command("zx",window_manager.toggle_window_manager)
         if (LIST_has_floor[current] === true) {
             document.getElementById("i_floor_rain").style.visibility = "visible";
         } else {
